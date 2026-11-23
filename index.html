@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nông trại bài tập · 과제농장</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="day">
+  <div id="sky" aria-hidden="true">
+    <div id="clouds"></div>
+    <div id="stars"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-logo" aria-hidden="true">☁️</span>
+      <h1 data-i18n="appName">Nông trại bài tập</h1>
+    </div>
+    <nav class="tools" data-i18n-aria="toolbar">
+      <button class="tool" type="button" data-action="add-subject">
+        <span class="ico" aria-hidden="true">➕</span><span data-i18n="btnAdd">Thêm môn</span>
+      </button>
+      <button class="tool" type="button" data-action="open-timer">
+        <span class="ico" aria-hidden="true">⏱️</span><span data-i18n="btnFocus">Tập trung</span>
+      </button>
+      <button class="tool" type="button" data-action="toggle-theme" id="theme-btn">
+        <span class="ico" aria-hidden="true" id="theme-ico">🌙</span><span id="theme-label">Đêm</span>
+      </button>
+      <div class="lang" role="group" aria-label="Tiếng Việt / 한국어">
+        <span class="ico" aria-hidden="true">🌐</span>
+        <button type="button" data-action="set-lang" data-lang="vi" lang="vi">Tiếng Việt</button>
+        <span class="sep" aria-hidden="true">/</span>
+        <button type="button" data-action="set-lang" data-lang="ko" lang="ko">한국어</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="stage">
+    <div class="farm-wrap">
+      <svg id="farm" viewBox="-380 -80 760 560" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+      <svg id="overlay" viewBox="-380 -80 760 560" preserveAspectRatio="xMidYMid meet" role="group" data-i18n-aria="farmLabel"></svg>
+    </div>
+    <div id="timer-chip" hidden></div>
+    <div id="empty-hint" class="empty-hint" hidden></div>
+  </main>
+
+  <aside id="panel" hidden></aside>
+  <div id="modal" class="modal" hidden></div>
+  <div id="alert" class="modal alert" hidden></div>
+  <div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/farm.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
